@@ -1,18 +1,18 @@
-'''
+"""
 https://leetcode.com/problems/letter-combinations-of-a-phone-number/?envType=problem-list-v2&envId=string
-'''
+"""
 
 
 class Solution(object):
     def letterCombinations(self, s):
-        list_leters = ['', '', 'abc', 'def', 'ghi', 'jkl', 'mno', 'pqrs', 'tuv', 'wxyz']
+        list_leters = ["", "", "abc", "def", "ghi", "jkl", "mno", "pqrs", "tuv", "wxyz"]
         # s = str(input())
         ans = list()
         i = 0
         res_str = ""
         if len(s) != 0:
             for j in range(0, len(list_leters[int(s[i])])):
-                if (len(s) > 1):
+                if len(s) > 1:
                     res_str += list_leters[int(s[i])][j]
                     for k in range(0, len(list_leters[int(s[i + 1])])):
                         if len(s) > 2:
